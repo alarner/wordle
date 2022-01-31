@@ -79,8 +79,8 @@ let matchingWordMap = getMatchingWordMap(guesses);
 // 3. Of all the possible remaining words, how likely is each letter to show up in that word?
 const letterLikelihood = getLetterLikelihood(matchingWordMap);
 
-// 4. For the second guess we want to find a word that doesn't use any letters that our first guess
-//    had and maximizes the letter likelihood
+// 4. For the second guess we want to find a word that **doesn't use any letters that our first
+//    guess had** and maximizes the letter likelihood
 const secondGuess = getSecondGuess(guesses, letterLikelihood);
 
 // 5. Make a second guess and record the result
